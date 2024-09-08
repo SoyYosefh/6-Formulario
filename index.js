@@ -10,16 +10,10 @@ function validarFormulario() {
     var mensaje = document.getElementById('mensaje').value.trim();
 
     // Se valida que los campos no estén vacíos
-    if (nombre == null || nombre.length == 0 ) {
-        alert('ERROR: El campo nombre no debe ir vacío o lleno de solamente espacios en blanco');
+    if (nombre == null || nombre.length == 0 || correo == null || correo.length == 0 || mensaje == null || mensaje.length == 0) {
+        alert('ERROR: Llene todos los campos');
         return false;
-    } else if (correo == null || correo.length == 0 ) {
-        alert('ERROR: El campo correo no debe ir vacío o lleno de solamente espacios en blanco');
-        return false;
-    } else if (mensaje == null || mensaje.length == 0 ) {
-        alert('ERROR: El campo mensaje no debe ir vacío o lleno de solamente espacios en blanco');
-        return false;
-    }else {
+    } else {
         alert('Formulario enviado con éxito');
         return true;
     }
